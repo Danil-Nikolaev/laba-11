@@ -1,0 +1,9 @@
+<h1>Calc#input</h1>
+<p>Find me in app/views/calc/input.html.erb</p>
+<%= form_tag("/calc/view", :method => "get") do %>
+  <%= label_tag("Value 1:") %>
+  <%= text_field_tag(:v1) %> <br/>
+  <%= label_tag("Value 2") %>
+  <%= text_field_tag(:v2) %> <br/>
+  <%= submit_tag("Calc result") %>
+<% end %>

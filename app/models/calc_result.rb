@@ -1,0 +1,2 @@
+class CalcResult < ApplicationRecord
+end
