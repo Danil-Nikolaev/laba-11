@@ -12,6 +12,8 @@ class CalcController < ApplicationController
     res = CalcResult.find_by(value_one: @v1, value_two: @v2)
     p res
     check_res res
+
+    results if params[:tag]["<id></id>"] == "1"
   end
 
   def evklid(num_one, num_two)
@@ -51,7 +53,7 @@ class CalcController < ApplicationController
     hash_result = ActiveSupport::JSON.decode(res.result)
     @result_one = hash_result['result_SCM']
     @result_two = hash_result['result_LCD']
-    #p hash_result
+    p hash_result
   end
 
   def res_false
@@ -71,5 +73,10 @@ class CalcController < ApplicationController
       res_false
     end
   end
+
+  def results
+    @result = CalcResult.all
+   render json: @result
+    end
 
 end

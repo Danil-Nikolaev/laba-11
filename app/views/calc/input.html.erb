@@ -5,5 +5,7 @@
   <%= text_field_tag(:v1) %> <br/>
   <%= label_tag("Value 2") %>
   <%= text_field_tag(:v2) %> <br/>
+  <%= label_tag("Показать ли всю БД?") %>
+  <%= check_box("tag", tag.id, {checked: true}) %>
   <%= submit_tag("Calc result") %>
 <% end %>
